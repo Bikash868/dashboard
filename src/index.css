@@ -1,3 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    opacity: 0;
+}
+
+.userCard:hover .content {
+    opacity:1;
+}
+
+.userCard:hover .profileImg{
+    background-color: #000;
+    opacity: .5;
+}
+
+.Icon {
+    color: #6366f1;
+    margin: 2px
+}

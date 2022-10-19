@@ -6,19 +6,32 @@ import Docs from './Components/Docs';
 import Pages from './Components/Pages';
 import UIKit from './Components/UIKit';
 import Account from './Components/Account';
+import { createContext, useState } from 'react';
+
+
+export const ThemedContext = createContext(null)
 
 function App() {
+  const [theme,setTheme] = useState("light");
+
+  const toggleTheme = (curr) => {
+    setTheme((curr)=>(curr==="light"?"dark":"light"));
+  }
   return (
-    <Router>
-      <NavBar />
-      <Routes>
-        <Route exact path='/landings' element={<Landings/>} />
-        <Route exact path='/' element={<Pages/>} />
-        <Route exact path='/account' element={<Account/>} />
-        <Route excat path='/uikit' element={<UIKit/>} />
-        <Route exact path='/docs' element={<Docs/>} />
-      </Routes>
-    </Router>
+    <ThemedContext.Provider value={{theme, toggleTheme}}>
+      <Router>
+      <div className='App' id={theme}>
+        <NavBar />
+        <Routes>
+          <Route exact path='/landings' element={<Landings/>} />
+          <Route exact path='/' element={<Pages/>} />
+          <Route exact path='/account' element={<Account/>} />
+          <Route excat path='/uikit' element={<UIKit/>} />
+          <Route exact path='/docs' element={<Docs/>} />
+        </Routes>
+      </div>
+      </Router>
+    </ThemedContext.Provider>
   );
 }
 

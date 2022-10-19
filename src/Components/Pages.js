@@ -23,7 +23,7 @@ const Pages = () => {
   return (
     <div className='flex flex-col justify-center' style={{width:'90%',margin:'auto'}}>
 
-      <span className='flex flex-col text-4xl font-bold items-center m-5' >Our Leadership</span>
+      <span className='Leadership flex flex-col text-4xl font-bold items-center m-5' >Our Leadership</span>
 
       <div className='flex flex-wrap justify-center'>
         {

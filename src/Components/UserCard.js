@@ -23,7 +23,7 @@ export default function UserCard({name,designation,imageUrl}) {
             component="img"
             image={imageUrl}
             alt="green iguana"
-            className='profileImg rounded-lg'
+            className='profileImg'
           />
           <div className='content'>
             <FacebookIcon className='Icon' style={IconStyle}/>

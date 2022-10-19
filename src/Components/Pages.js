@@ -7,12 +7,13 @@ const Pages = () => {
   const [userData,setUserData] = useState([]);
 
   const fetch = async() => {
-    const { data } = await axios.get('https://randomuser.me/api?results=10');
-
-    console.log("res:",data)
-
-    setUserData(data.results)
-
+    try{
+      const { data } = await axios.get('https://randomuser.me/api?results=10');
+      console.log("res:",data)
+      setUserData(data.results)
+    } catch(err) {
+      alert(err)
+    }
   }
 
   useEffect(()=>{

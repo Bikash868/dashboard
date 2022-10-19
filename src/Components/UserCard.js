@@ -4,7 +4,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
-//style={{position:'absolute'}}
+
 export default function UserCard({name,designation,imageUrl}) {
   return (
     <Card className='m-8' style={{width:'300px',position:'relative'}}>

@@ -12,7 +12,7 @@ function Navbar() {
     <nav className='flex justify-around border-2 sticky shadow-md items-center z-10' style={{height:'70px'}}>
         <div className='flex w-2/3 justify-start items-center'>
             <div className='flex '>
-                <Link to='/' className='flex '>
+                <Link to='/landings' className='flex '>
                     <img src={LogoImg} alt="silicon logo" style={{objectFit:'fill',height:'35px',width:'35px',marginRight:'10px'}}/>
                     <span className='text-2xl font-semibold'>Silicon</span>
                 </Link>
@@ -22,7 +22,7 @@ function Navbar() {
                 <div><Link to='/' className='text-md font-normal hover:text-blue-600' > 
                     Landings 
                 </Link></div>
-                <div><Link to='/pages' className='text-md font-normal hover:text-blue-600' > Pages </Link></div>
+                <div><Link to='/' className='text-md font-normal hover:text-blue-600' > Pages </Link></div>
                 <div><Link to='/account' className='text-md font-normal hover:text-blue-600' > Account </Link></div>
                 <div><Link to='/uikit' className='text-md font-normal hover:text-blue-600' > UI Kit </Link></div>
                 <div><Link to='/docs' className='text-md font-normal hover:text-blue-600' > Docs </Link></div>

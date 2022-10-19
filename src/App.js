@@ -12,8 +12,8 @@ function App() {
     <Router>
       <NavBar />
       <Routes>
-        <Route exact path='/' element={<Landings/>} />
-        <Route exact path='/pages' element={<Pages/>} />
+        <Route exact path='/landings' element={<Landings/>} />
+        <Route exact path='/' element={<Pages/>} />
         <Route exact path='/account' element={<Account/>} />
         <Route excat path='/uikit' element={<UIKit/>} />
         <Route exact path='/docs' element={<Docs/>} />

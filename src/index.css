@@ -27,3 +27,10 @@
     color: #6366f1;
     margin: 2px
 }
+
+nav {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0; /* required */
+    background-color: #fff;
+  }

@@ -5,7 +5,8 @@ import Landings from './Components/Landings';
 import Docs from './Components/Docs';
 import Pages from './Components/Pages';
 import UIKit from './Components/UIKit';
-import Account from './Components/Account';
+import Account from './Components/Account'; 
+import UserDetailsCard from './Components/UserDetails'; 
 import { createContext, useState } from 'react';
 
 
@@ -28,6 +29,7 @@ function App() {
           <Route exact path='/account' element={<Account/>} />
           <Route excat path='/uikit' element={<UIKit/>} />
           <Route exact path='/docs' element={<Docs/>} />
+          <Route exact path='/users/:userId' element={<UserDetailsCard/>} />
         </Routes>
       </div>
       </Router>

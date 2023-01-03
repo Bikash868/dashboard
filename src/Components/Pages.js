@@ -9,9 +9,9 @@ const Pages = () => {
 
   const fetch = async() => {
     try{
-      const { data } = await axios.get('https://randomuser.me/api?results=10');
+      const { data } = await axios.get('https://jsonplaceholder.typicode.com/users');
       console.log("res:",data)
-      setUserData(data.results)
+      setUserData(data)
     } catch(err) {
       alert(err)
     }
@@ -29,9 +29,8 @@ const Pages = () => {
       <div className='flex flex-wrap justify-center'>
         {
           userData.length > 0 && userData.map((user)=> {
-            const {title,first,last} = user.name
-            const imageUrl = user.picture.large
-            return <UserCard key={user.email} name={`${title} ${first} ${last}`} designation={user.email} imageUrl={imageUrl}/>
+            const {id,name, username, email} = user
+            return <UserCard key={user.email} name={name} username={username} email={email} id={id}/>
           })
         }
       </div>
